@@ -1,0 +1,43 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f4f1e8; color: #2c2c2a; font-size: 13px; }
+#topbar { display: flex; align-items: center; gap: 14px; padding: 8px 14px; background: #ece3cd; border-bottom: 1px solid #b4b2a9; }
+#topbar .logo { font-weight: 500; color: #712b13; }
+#topbar button { padding: 4px 12px; border: 1px solid #8f8464; background: #faf7ee; cursor: pointer; border-radius: 6px; }
+#topbar button:hover { background: #e8dfc6; }
+#main { display: flex; height: calc(100vh - 38px); }
+#mapwrap { flex: 1; overflow: auto; background: #dce9f2; }
+#map { display: block; cursor: pointer; }
+#side { width: 340px; border-left: 1px solid #b4b2a9; display: flex; flex-direction: column; background: #faf7ee; }
+#panel { flex: 1; overflow-y: auto; padding: 10px 12px; }
+#log { height: 180px; overflow-y: auto; border-top: 1px solid #b4b2a9; padding: 6px 10px; font-size: 12px; background: #f1ede0; }
+#log div { margin-bottom: 3px; line-height: 1.45; }
+#log .war { color: #a32d2d; }
+#log .good { color: #0f6e56; }
+h3 { font-weight: 500; margin-bottom: 6px; color: #501313; }
+.prow { margin: 4px 0; line-height: 1.5; }
+.dim { color: #5f5e5a; }
+.btnlist button { display: inline-block; margin: 3px 4px 3px 0; padding: 3px 8px; border: 1px solid #8f8464; background: #faf7ee; cursor: pointer; border-radius: 5px; font-size: 12px; }
+.btnlist button:hover { background: #e8dfc6; }
+.btnlist button:disabled { opacity: 0.4; cursor: default; }
+.armyrow { border: 1px solid #d3d1c7; border-radius: 6px; padding: 5px 8px; margin: 4px 0; background: #fff; }
+#modal { position: fixed; inset: 0; background: rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: center; z-index: 10; }
+#modal.hidden { display: none; }
+#modal-box { background: #faf7ee; border: 1px solid #8f8464; border-radius: 10px; padding: 16px 20px; max-width: 640px; max-height: 80vh; overflow-y: auto; }
+#modal-text { font-size: 12px; line-height: 1.6; white-space: pre-wrap; margin-bottom: 10px; font-family: inherit; }
+#modal-close { padding: 4px 16px; border: 1px solid #8f8464; background: #ece3cd; cursor: pointer; border-radius: 6px; }
+.movehint { color: #0f6e56; font-weight: 500; }
+
+/* ===== 战术弹窗 ===== */
+#tac { position: fixed; inset: 0; background: rgba(0,0,0,0.55); display: flex; z-index: 20; overflow: auto; padding: 12px; }
+#tac.hidden { display: none; }
+#tac-box { background: #faf7ee; border: 1px solid #8f8464; border-radius: 10px; padding: 12px 14px; margin: auto; max-width: 96vw; }
+#tac-head { margin-bottom: 8px; color: #501313; }
+#tac-body { display: flex; gap: 10px; flex-wrap: wrap; }
+#tacmap { background: #b8d2e4; border: 1px solid #b4b2a9; border-radius: 6px; cursor: grab; max-width: 100%; height: auto; touch-action: none; user-select: none; -webkit-user-select: none; }
+#tac-side { width: 300px; max-width: 96vw; display: flex; flex-direction: column; }
+#tac-ctrl { min-height: 110px; }
+#tac-log { flex: 1; overflow-y: auto; height: 280px; font-size: 11px; line-height: 1.5; background: #f1ede0; border: 1px solid #d3d1c7; border-radius: 6px; padding: 6px 8px; user-select: none; -webkit-user-select: none; }
+#tac-foot { margin-top: 8px; }
+#tac-foot button { padding: 5px 14px; margin-right: 8px; border: 1px solid #8f8464; background: #ece3cd; cursor: pointer; border-radius: 6px; }
+#tac-foot button:disabled { opacity: 0.4; cursor: default; }
+#tac-foot button.hidden { display: none; }

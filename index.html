@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>罗马战略 Res Publica — 布匿战争时代</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="topbar">
+  <span class="logo">SPQR · 布匿战争时代</span>
+  <span id="tb-date">—</span>
+  <span id="tb-treasury">—</span>
+  <span id="tb-mp">—</span>
+  <span id="tb-grain">—</span>
+  <button id="btn-end">结束回合</button>
+  <button id="btn-test">兵种克制测试</button>
+</div>
+<div id="main">
+  <div id="mapwrap"><canvas id="map" width="1000" height="640"></canvas></div>
+  <div id="side">
+    <div id="panel"></div>
+    <div id="log"></div>
+  </div>
+</div>
+<div id="modal" class="hidden"><div id="modal-box"><pre id="modal-text"></pre><button id="modal-close">关闭</button></div></div>
+
+<div id="tac" class="hidden">
+  <div id="tac-box">
+    <div id="tac-head"><b id="tac-title">战术地图</b></div>
+    <div id="tac-body">
+      <canvas id="tacmap" width="920" height="470"></canvas>
+      <div id="tac-side">
+        <div id="tac-ctrl"></div>
+        <div id="tac-log"></div>
+      </div>
+    </div>
+    <div id="tac-foot">
+      <button id="tac-start">开始战斗（自动推演）</button>
+      <button id="tac-auto">自动结算（战略快算）</button>
+      <button id="tac-close" class="hidden">关闭</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/lib/honeycomb-grid.umd.js"></script>
+<script src="js/data.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/tactical.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
